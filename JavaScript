@@ -1,0 +1,16 @@
+function palindrome(str) {
+  str = str.replace(/[^0-9a-z]/gi, '');
+  str = str.split('');
+  for (let i = 0; i < str.length; i++) {
+    str[i] = str[i].toLowerCase();
+  }
+  str = str.join('');
+  if (str === str.split('').reverse().join('')) {
+    return true;
+  }
+  return false;
+}
+
+
+
+palindrome("A man, a plan, a canal. Panama");
